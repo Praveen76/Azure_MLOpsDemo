@@ -12,6 +12,7 @@ stages:
     displayName: "Provision Dev resources"
     pool:
       vmImage: 'ubuntu-latest'
+      name: '$(AGENT_POOL_NAME)'
       demands: Limit -equals DisAbleParallel 
     timeoutInMinutes: 0
     steps:
