@@ -12,6 +12,7 @@ stages:
     displayName: "Provision Dev resources"
     pool:
       vmImage: 'ubuntu-latest'
+      demands: Limit -equals DisAbleParallel 
     timeoutInMinutes: 0
     steps:
     - task: AzureResourceGroupDeployment@2
